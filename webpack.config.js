@@ -1,10 +1,15 @@
-module.exports = {
+import path from 'path';
+import HtmlWebpackPlugin from "html-webpack-plugin";
+
+const configs = {
     entry: {
         main: './src/main.js'
     },
     output: {
         filename: '[name].[contenthash].bundle.js',
-        path: __dirname + '/dist',
+        path: path.resolve('dist'),
+        clean: true,
+        publicPath: './',
     },
     module: {
         rules: [
@@ -14,4 +19,12 @@ module.exports = {
             },
         ],
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve('public/index.html'),
+            inject: 'body',
+        }),
+    ],
 };
+
+export default configs;
