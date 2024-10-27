@@ -7,7 +7,7 @@ const configs = {
     },
     output: {
         filename: '[name].[contenthash].bundle.js',
-        path: path.resolve('dist'),
+        path: path.resolve('./dist'),
         clean: true,
         publicPath: './',
     },
@@ -21,8 +21,8 @@ const configs = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve('public/index.html'),
-            inject: 'body',
+            template: path.resolve('./public/index.html'),
+            favicon: path.resolve('./public/favicon.ico'),
         }),
     ],
 };
