@@ -1,5 +1,6 @@
 import {reverse} from 'lodash';
 import './style/reset.css';
+import './app.jsx';
 
 const reverseArray = (inputArray) => {
     console.log(reverse(inputArray));
