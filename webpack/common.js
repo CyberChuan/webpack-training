@@ -3,13 +3,16 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const configs = {
     entry: {
-        main: './src/main.js'
+        main: './src/main.tsx'
     },
     output: {
         filename: '[name].[contenthash].bundle.js',
         path: path.resolve('./dist'),
         clean: true,
         publicPath: './',
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
     },
     module: {
         rules: [
@@ -18,7 +21,7 @@ const configs = {
                 use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.jsx?$/,
+                test: /\.(js|ts)x?$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
             }
