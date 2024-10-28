@@ -1,7 +1,7 @@
 import Header from "./header";
 import './style/reset.css'
 
-const App = () => {
+const App = (): any => {
   return (
       <div>
           <Header/>
