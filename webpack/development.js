@@ -1,6 +1,6 @@
 import {merge} from 'webpack-merge';
 import commonConfig from './common.js'
-import path from "path";
+import path from 'path';
 
 export default merge(commonConfig, {
     mode: 'development',

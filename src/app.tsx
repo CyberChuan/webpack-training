@@ -1,7 +1,7 @@
-import Header from "./header";
+import Header from './header';
 import './style/reset.css'
 
-const App = (): any => {
+const App = (): JSX.Element => {
   return (
       <div>
           <Header/>
