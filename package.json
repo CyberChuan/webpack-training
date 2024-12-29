@@ -10,7 +10,7 @@
     "tsc": "tsc",
     "eslint": "eslint --fix"
   },
-  "author": "Raymonton",
+  "author": "CyberChuan",
   "license": "MIT",
   "description": "config webpack 5 manually",
   "dependencies": {
