@@ -1,7 +1,7 @@
-const Header = () => {
+function Header() {
     return (
         <header className="text-red-700">
-            I&apos;m Header.
+            halo
         </header>
     )
 }

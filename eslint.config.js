@@ -10,10 +10,12 @@ export default [
     {languageOptions: {globals: globals.browser}},
     pluginJs.configs.recommended,
     ...tsEslint.configs.recommended,
-    pluginReact.configs.flat.recommended,
+    pluginReact.configs.flat.all,
     {
         rules: {
             'react/react-in-jsx-scope': 'off',
+            'react/jsx-filename-extension': 'off',
+            'react/jsx-no-literals': 'off',
             'quotes': ['error', 'single']
         }
     },
