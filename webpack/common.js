@@ -1,12 +1,13 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 const configs = {
     entry: {
         main: './src/main.tsx'
     },
     output: {
-        filename: '[name].[contenthash].bundle.js',
+        filename: 'js/[name]_[contenthash:6].bundle.js',
         path: path.resolve('./dist'),
         clean: true,
         publicPath: './',
@@ -30,8 +31,18 @@ const configs = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve('./public/index.html'),
-            favicon: path.resolve('./public/favicon.ico'),
         }),
+        new CopyWebpackPlugin({
+            patterns: [{
+                from: './public',
+                globOptions: {
+                    ignore: ['**/index.html']
+                }
+            }],
+            options: {
+                concurrency: 100,
+            },
+        })
     ],
 };
 
