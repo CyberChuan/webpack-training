@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-indent */
 import Header from './header';
 import './style/reset.css'
 import './style/main.css'
@@ -9,7 +8,7 @@ function App(): JSX.Element {
       <Header />
 
       <h1>
-          Hello, world!
+        Hello, world!
       </h1>
     </div>
   )
