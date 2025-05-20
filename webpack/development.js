@@ -3,22 +3,22 @@ import commonConfig from './common.js'
 import path from 'path';
 
 export default merge(commonConfig, {
-    mode: 'development',
-    devtool: 'source-map',
-    devServer: {
-        static: path.resolve('./dist'),
-        port: 4000,
-        open: true,
-        liveReload: false,
-        compress: true,
-        headers: {
-          'cache-control': 'no-store',
-        },
-        devMiddleware: {
-            writeToDisk: true,
-        }
+  mode: 'development',
+  devtool: 'source-map',
+  devServer: {
+    static: path.resolve('./dist'),
+    port: 4000,
+    open: true,
+    liveReload: false,
+    compress: true,
+    headers: {
+      'cache-control': 'no-store',
     },
-    optimization: {
-        runtimeChunk: 'single',
-    },
+    devMiddleware: {
+      writeToDisk: true,
+    }
+  },
+  optimization: {
+    runtimeChunk: 'single',
+  },
 });
